@@ -224,7 +224,7 @@ define gluster::volume (
       # did the options change?
       $current_options = getvar("gluster_volume_${title}_options")
       if $current_options {
-        $_current = sort( split($current_options, ',') )
+        $_current = sort($current_options)
       } else {
         $_current = []
       }

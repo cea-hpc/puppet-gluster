@@ -82,7 +82,7 @@ if binary
       volume_options.each do |vol, opts|
         Facter.add("gluster_volume_#{vol}_options".to_sym) do
           setcode do
-            opts.join(',')
+            opts
           end
         end
       end
